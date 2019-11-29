@@ -17,11 +17,11 @@
  - JWT Token als Session.
  ### APIs
  **Node JS APIs**
- 1 bis N node.js Express APIs
- Hier wird keine Authentication gehandelt.
- Von "Außen" nicht erreichbar.
- Keine Connection zur DB.
- Thematisch gegliedert (z.B. auth.api => signup & login).
+ - 1 bis N node.js Express APIs
+ - Hier wird keine Authentication gehandelt.
+ - Von "Außen" nicht erreichbar.
+ - Keine Connection zur DB.
+ - Thematisch gegliedert (z.B. auth.api => signup & login).
   ### Microservices Gateway
  **Express Gateway**
  - Wird als Proxy und Loadbalancer verwendet.
