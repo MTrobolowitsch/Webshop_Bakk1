@@ -1,0 +1,50 @@
+http:
+  port: 8090
+admin:
+  port: 9877
+  host: localhost
+apiEndpoints:
+  login:                  # name, used as reference in pipeline
+    host: '*'       # wildcard pattern support
+    paths:
+      - '/services/login'
+  signup:                  # name, used as reference in pipeline
+    host: '*'       # wildcard pattern support
+    paths:
+      - '/services/signup'
+  movies:                  # name, used as reference in pipeline
+    host: '*'       # wildcard pattern support
+    paths:
+      - '/services/movies'
+serviceEndpoints:
+  loginEndpoint:
+    url: 'http://localhost:4000'
+  signupEndpoint:
+    url: 'http://localhost:4001'
+  moviesEndpoint:
+    url: 'http://localhost:4002'
+policies:
+  - cors
+  - proxy
+pipelines:
+    - name: login-internal
+      apiEndpoints:
+        - login
+      policies:
+        - proxy:
+            - action:
+                serviceEndpoint: loginEndpoint
+    - name: signup-internal
+      apiEndpoints:
+        - movies
+      policies:
+        - proxy:
+            - action:
+                serviceEndpoint: signupEndpoint
+    - name: movies-internal
+      apiEndpoints:
+        - movies
+      policies:
+        - proxy:
+            - action:
+                serviceEndpoint: moviesEndpoint
