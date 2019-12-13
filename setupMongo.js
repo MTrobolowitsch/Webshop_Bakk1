@@ -34,10 +34,6 @@ MongoClient.connect(url, function (err, connection) {
                 console.info(err);
             } else {
                 console.log("Collection is created: ", result.collectionName);
-                if(result.countDocuments > 0){
-                    connection.close();
-                    return;
-                }
                 result.insertMany([
                     { "name": "1", "password": "1", "registerDate": "2019-11-28T17:39:32.715Z", "isAdmin": false },
                     { "name": "admin", "password": "admin", "registerDate": "2019-11-28T17:39:32.715Z", "isAdmin": true },

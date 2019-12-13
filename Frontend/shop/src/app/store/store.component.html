@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-lg-2 col-md-3 col-6"  *ngFor="let movie of movies">
+        <div class="card shadow-lg p-3 mb-5 bg-white rounded"  >
+          <img class="card-img-top" src="{{movie.image}}" alt="Card image">
+          <div class="card-body">
+            <h5 class="card-title">{{movie.name}}</h5>
+            <p class="card-text">Release Date: {{movie.date | date}}<br>{{movie.description}}</p>
+            <button (click)="selectMovie(movie)" class="btn btn-primary">Select Movie</button>
+          </div>
+        </div>
+  </div>
+</div>

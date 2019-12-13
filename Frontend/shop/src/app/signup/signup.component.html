@@ -1,0 +1,25 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+  
+      <!-- Icon -->
+      <div class="fadeIn first">
+        signup
+        <!-- <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" /> -->
+      </div>
+  
+      <!-- signup Form -->
+      <form>
+        <input type="text" [(ngModel)]="username" id="signup" class="fadeIn second" name="signusignup" placeholder="signup">
+        <input type="text" [(ngModel)]="password" id="password" class="fadeIn third" name="signup" placeholder="password">
+        <br>
+        <button type="button" class="btn btn-primary fadeIn fourth" (click)="signup()" color="primary">signup</button>
+      </form>
+  
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" href="/login">Login?</a>
+      </div>
+  
+    </div>
+  </div>
