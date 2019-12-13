@@ -1,6 +1,11 @@
 
 # Microservice Based Architecture Prototype (Movie Webshop)
 
+## Usage
+- MongoDB Local installieren
+- npm install
+- npm run start-cluster 
+
  ## Grundlegende Architektur
 - Communication über http
 - Push messages über socket.io Websockets.
@@ -40,8 +45,6 @@
 - 1 bis N MongoDB Instanzen
 
 TODO:
- - Docker Compose -> Das ganze System sollte mit einem Command lokal zu starten sein
- - MongoDB Init Script
  - Restliche Funktionalität implementieren (Einkaufswagen, Kaufen, Leihen, Userdaten ändern etc...)
  - Websocket für Push messages implementieren
  - Refactorings
